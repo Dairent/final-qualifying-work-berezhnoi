@@ -1,0 +1,25 @@
+[gd_scene format=2]
+
+[node name="BottomPanel" type="HBoxContainer"]
+anchor_left = 0.0
+anchor_right = 1.0
+margin_left = 20.0
+margin_right = -20.0
+margin_bottom = 10.0
+size_flags_horizontal = 4
+
+[node name="Attack" type="Button" parent="."]
+text = "⚔ Базовая атака"
+size_flags_horizontal = 3
+
+[node name="Skill1" type="Button" parent="."]
+text = "✨ Навык 1"
+size_flags_horizontal = 3
+
+[node name="Skill2" type="Button" parent="."]
+text = "✨ Навык 2"
+size_flags_horizontal = 3
+
+[node name="Move" type="Button" parent="."]
+text = "👣 Шаг"
+size_flags_horizontal = 3
