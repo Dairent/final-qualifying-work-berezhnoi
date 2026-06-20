@@ -1,0 +1,12 @@
+[gd_resource type="TileSet" load_steps=1 format=2]
+
+[resource]
+tile_size = Vector2( 32, 32 )
+0/name = "water"
+0/texture = null
+1/name = "ground"
+1/texture = null
+2/name = "tree"
+2/texture = null
+3/name = "grass"
+3/texture = null
