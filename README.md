@@ -85,6 +85,7 @@
 
 ## 📁 Структура проекта
 TBS_Prototype/
+
 ├── project.godot # Конфигурация движка
 ├── icon.png # Иконка игры
 ├── README.md # Этот файл
