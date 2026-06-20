@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/entities/HeroClassData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+class_name = "Лучник"
+max_hp = 100
+attack = 18
+defense = 6
+move_points = 5
+initiative = 12
+skills = ["Двойной выстрел", "Уклонение"]
+portrait = null
+description = "Меткий стрелок, предпочитающий держать дистанцию. Быстр и точен."
