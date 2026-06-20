@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/entities/ItemData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+item_name = "Амулет защиты"
+description = "+3 к защите (постоянно)"
+cost = 25
+effect_type = "defense_up"
+effect_value = 3
