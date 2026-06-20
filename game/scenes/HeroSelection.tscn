@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/HeroSelection.gd" type="Script" id=1]
+
+[node name="HeroSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.15, 0.12, 0.1, 1 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 100.0
+margin_bottom = 20.0
+text = "Выберите героя"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -150.0
+margin_right = 350.0
+margin_bottom = 150.0
+size_flags_horizontal = 4
+
+[node name="WarriorCard" type="Button" parent="HBoxContainer"]
+size_flags_horizontal = 3
+text = "Воин\n\nHP: 120\nATK: 15\nDEF: 10\nSPD: 4"
+
+[node name="MageCard" type="Button" parent="HBoxContainer"]
+size_flags_horizontal = 3
+text = "Маг\n\nHP: 80\nATK: 12\nDEF: 4\nSPD: 3"
+
+[node name="ArcherCard" type="Button" parent="HBoxContainer"]
+size_flags_horizontal = 3
+text = "Лучник\n\nHP: 100\nATK: 18\nDEF: 6\nSPD: 5"
+
+[node name="ConfirmButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -50.0
+margin_top = -80.0
+margin_right = 50.0
+margin_bottom = -40.0
+text = "Выбрать"
+disabled = true
+
+[connection signal="pressed" from="HBoxContainer/WarriorCard" to="." method="_on_Card_pressed" binds= [ "warrior" ]]
+[connection signal="pressed" from="HBoxContainer/MageCard" to="." method="_on_Card_pressed" binds= [ "mage" ]]
+[connection signal="pressed" from="HBoxContainer/ArcherCard" to="." method="_on_Card_pressed" binds= [ "archer" ]]
+[connection signal="pressed" from="ConfirmButton" to="." method="_on_ConfirmButton_pressed"]
