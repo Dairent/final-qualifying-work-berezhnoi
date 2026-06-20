@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/entities/ItemData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+item_name = "Зелье здоровья"
+description = "Восстанавливает 20 HP"
+cost = 15
+effect_type = "heal"
+effect_value = 20
