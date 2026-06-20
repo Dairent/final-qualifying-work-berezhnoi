@@ -1,4 +1,4 @@
-# ⚔️ TBS Roguelike Game Prototyp
+# ⚔️ TBS Roguelike Game Prototype
 
 **Пошаговая тактическая стратегия (TBS) с элементами рогалика**
 
