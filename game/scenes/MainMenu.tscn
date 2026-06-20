@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.1, 0.1, 0.15, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -150.0
+margin_right = 150.0
+margin_bottom = 150.0
+size_flags_horizontal = 4
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+text = "TBS Roguelike"
+align = 1
+valign = 1
+
+[node name="NewGame" type="Button" parent="VBoxContainer"]
+text = "Новая игра"
+size_flags_horizontal = 4
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+text = "Продолжить"
+size_flags_horizontal = 4
+
+[node name="Load" type="Button" parent="VBoxContainer"]
+text = "Загрузить"
+size_flags_horizontal = 4
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+text = "Настройки"
+size_flags_horizontal = 4
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+text = "Выход"
+size_flags_horizontal = 4
+
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
