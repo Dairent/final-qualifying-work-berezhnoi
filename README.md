@@ -89,64 +89,63 @@ TBS_Prototype/
 ├── icon.png # Иконка игры
 ├── README.md # Этот файл
 ├── scenes/ # Все игровые сцены
-│ ├── MainMenu.tscn # Главное меню
-│ ├── MainMenu.gd
-│ ├── HeroSelection.tscn # Выбор героя
-│ ├── HeroSelection.gd
-│ ├── BattleScene.tscn # Основная сцена боя
-│ ├── BattleScene.gd
-│ └── ui/ # Вспомогательные сцены интерфейса
-│ ├── BottomPanel.tscn # Панель действий в бою
-│ ├── TurnOrderPanel.tscn # Панель очерёдности ходов
-│ ├── PathMap.tscn # Карта выбора пути после боя
-│ ├── PathMap.gd
-│ ├── ShopPopup.tscn # Магазин
-│ ├── ShopPopup.gd
-│ ├── CampfirePopup.tscn # Костёр (восстановление)
-│ └── CampfirePopup.gd
+│   ├── MainMenu.tscn # Главное меню
+│   ├── MainMenu.gd # Скрипт главного меню
+│   ├── HeroSelection.tscn # Выбор героя
+│   ├── HeroSelection.gd # Скрипт выбора героя
+│   ├── BattleScene.tscn # Основная сцена боя
+│   ├── BattleScene.gd # Скрипт боевой сцены
+│   └── ui/ # Вспомогательные сцены интерфейса
+│       ├── BottomPanel.tscn # Панель действий в бою
+│       ├── TurnOrderPanel.tscn # Панель очерёдности ходов
+│       ├── PathMap.tscn # Карта выбора пути после боя
+│       ├── PathMap.gd # Скрипт карты пути
+│       ├── ShopPopup.tscn # Магазин
+│       ├── ShopPopup.gd # Скрипт магазина
+│       ├── CampfirePopup.tscn # Костёр (восстановление)
+│       └── CampfirePopup.gd # Скрипт костра
 ├── scripts/ # Все скрипты
-│ ├── managers/ # Глобальные менеджеры (автозагрузка)
-│ │ ├── GameManager.gd # Состояние игры, монеты, инвентарь
-│ │ ├── SaveManager.gd # Сохранение/загрузка (JSON)
-│ │ └── AudioManager.gd # Управление звуком
-│ ├── entities/ # Классы сущностей
-│ │ ├── Hero.gd # Герой
-│ │ ├── Enemy.gd # Враг (с перечислением типов)
-│ │ ├── StatusEffect.gd # Ресурс статус-эффекта
-│ │ ├── HeroClassData.gd # Ресурс данных класса героя
-│ │ └── ItemData.gd # Ресурс предмета (для магазина)
-│ ├── generation/ # Генерация карт
-│ │ └── MapGenerator.gd # Шум Перлина + клеточный автомат
-│ ├── ai/ # Искусственный интеллект
-│ │ └── EnemyAI.gd # Поведение врагов (ближний, дальний, защита)
-│ └── utils/ # Вспомогательные алгоритмы
-│ ├── Dijkstra.gd # Расчёт зоны движения
-│ ├── AStar.gd # Поиск пути для ИИ
-│ └── CellularAutomata.gd # Клеточный автомат (отдельно)
+│   ├── managers/ # Глобальные менеджеры (автозагрузка)
+│   │   ├── GameManager.gd # Состояние игры, монеты, инвентарь
+│   │   ├── SaveManager.gd # Сохранение/загрузка (JSON)
+│   │   └── AudioManager.gd # Управление звуком
+│   ├── entities/ # Классы сущностей
+│   │   ├── Hero.gd # Герой
+│   │   ├── Enemy.gd # Враг (с перечислением типов)
+│   │   ├── StatusEffect.gd # Ресурс статус-эффекта
+│   │   ├── HeroClassData.gd # Ресурс данных класса героя
+│   │   └── ItemData.gd # Ресурс предмета (для магазина)
+│   ├── generation/ # Генерация карт
+│   │   └── MapGenerator.gd # Шум Перлина + клеточный автомат
+│   ├── ai/ # Искусственный интеллект
+│   │   └── EnemyAI.gd # Поведение врагов (ближний, дальний, защита)
+│   └── utils/ # Вспомогательные алгоритмы
+│       ├── Dijkstra.gd # Расчёт зоны движения
+│       ├── AStar.gd # Поиск пути для ИИ
+│       └── CellularAutomata.gd # Клеточный автомат (отдельно)
 ├── assets/ # Все ресурсы (графика, звуки, данные)
-│ ├── sprites/ # Изображения (заглушки)
-│ │ ├── tiles/
-│ │ │ └── tile_set.tres # Набор тайлов (пустой, для демонстрации)
-│ │ ├── heroes/
-│ │ ├── enemies/
-│ │ └── ui/
-│ ├── sounds/ # Звуки (папки для музыки и эффектов)
-│ │ ├── music/
-│ │ └── sfx/
-│ ├── resources/ # Данные в формате .tres
-│ │ ├── hero_classes/ # Классы героев (Warrior, Mage, Archer)
-│ │ │ ├── Warrior.tres
-│ │ │ ├── Mage.tres
-│ │ │ └── Archer.tres
-│ │ └── items/ # Предметы для магазина
-│ │ ├── HealthPotion.tres
-│ │ ├── StrengthRing.tres
-│ │ ├── Amulet.tres
-│ │ └── SpeedBoots.tres
-│ └── settings/
-│ └── settings.json # Настройки громкости, полноэкранный режим
-└── saves/ # Папка для сохранений (создаётся автоматически)
-└── (пусто)
+│   ├── sprites/ # Изображения (заглушки)
+│   │   ├── tiles/
+│   │   │   └── tile_set.tres # Набор тайлов (пустой, для демонстрации)
+│   │   ├── heroes/ # Спрайты героев
+│   │   └── enemies/ # Спрайты врагов
+│   ├── sounds/ # Звуки
+│   │   ├── music/ # Музыка
+│   │   └── effects/ # Звуковые эффекты
+│   └── resources/ # Данные в формате .tres
+│       ├── hero_classes/ # Классы героев (Warrior, Mage, Archer)
+│       │   ├── Warrior.tres
+│       │   ├── Mage.tres
+│       │   └── Archer.tres
+│       └── items/ # Предметы для магазина
+│           ├── HealthPotion.tres
+│           ├── StrengthRing.tres
+│           ├── Amulet.tres
+│           └── SpeedBoots.tres
+├── settings/ # Настройки
+│   └── settings.json # Настройки громкости, полноэкранный режим
+└── saves/ # Папка для сохранения (создаётся автоматически)
+    (пусто)
 
 🤝 Благодарности
 Научный руководитель — Ефимов А.И., доцент кафедры прикладной информатики и инноватики ЮФУ.
